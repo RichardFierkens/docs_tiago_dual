@@ -86,5 +86,4 @@ In order to shut down the Tiago follow the procedure below:
 .. warning::
 
 	Pay Attention! 
-The motors will shut down, so the head will fall down and the arms too. That's why it is important to let the arms rest on the base. 
-Maybe even help him while shuttung down.
+	The motors will shut down, so the head will fall down and the arms too. That's why it is important to let the arms rest on the base. Maybe even help him while shuttung down.
