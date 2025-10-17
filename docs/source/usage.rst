@@ -81,9 +81,10 @@ In order to shut down the Tiago follow the procedure below:
 	1. Make sure that the torso is down, until the arms lie almost on the base.
 	2. Place the arms on the foam pads on the base
 	3. Press the On/Off button for 1 second. 
--- note::
-
-	Pay Attention! The motors will shut down, so the head will fall down and the arms too. That's why it is important to let the arms rest on the base. Maybe even help him while shutting down.
-
-
 	4. When the On/Off button stops blinking, pres the electric switch.
+
+.. warning::
+
+	Pay Attention! 
+The motors will shut down, so the head will fall down and the arms too. That's why it is important to let the arms rest on the base. 
+Maybe even help him while shuttung down.
