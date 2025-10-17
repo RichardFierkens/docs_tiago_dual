@@ -1,17 +1,17 @@
 Software Structure
 ==================
 
-The package from `PAL Robotics` are provided in `/opt/pal/alum/share/`. In here are the packages presented. Most of the packages only provided launch files and config files. Those files can only be editted as sudo. The basic functions consist of the following packages:
+The package from ``PAL Robotics`` are provided in `/opt/pal/alum/share/`. In here are the packages presented. Most of the packages only provided launch files and config files. Those files can only be editted as sudo. The basic functions consist of the following packages:
 
-`tiago_dual_bringup`: Launches all the needed configs
+	- ``tiago_dual_bringup``: Launches all the needed configs
 
-`tiago_dual_description`: Provides the definition of the Tiago model, the meshes and also the physical constraints.
+	- ``tiago_dual_description``: Provides the definition of the Tiago model, the meshes and also the physical constraints.
 
-`tiago_dual_gazebo`: This launches gazebo in a fixed world from PAL with the Tiago model.
+	- ``tiago_dual_gazebo``: This launches gazebo in a fixed world from PAL with the Tiago model.
 
-`tiago_dual_moveit_config`: Houses all the information about the manipulators and controllers. This package is needed if you want to move Moveit2 for controlling the manipulators.
+	- ``tiago_dual_moveit_config``: Houses all the information about the manipulators and controllers. This package is needed if you want to move Moveit2 for controlling the manipulators.
 
-`pmb2_2dnav`: Houses the navigation for the Tiago that determine the best route and update to the current environmental situation.
+	- ``pmb2_2dnav``: Houses the navigation for the Tiago that determine the best route and update to the current environmental situation.
 
 
 Simulation
