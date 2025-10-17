@@ -17,7 +17,7 @@ The green button has three indicators with different modes described below:
 
 .. image:: back_tiago_base.png
    :width: 700px
-   :height: 300px
+   :height: 250px
    :scale: 75 %
    :align: center
 
@@ -34,21 +34,21 @@ The Tiago has a WiFi network called 'tiago-dual-115-Hotspot', and the default pa
 
 It is also possible to ssh in the Tiago. First make sure you are connected. Type in the terminal the following:
 
-..code-block::
+..code-block:: console
 
   ssh pal@<IP-address>
 
 The password is *pal*. To log in as root, type:
 
-..code-block::
+..code-block:: console
 
   ssh root@<IP-address>
 
 The password is *palroot*
 
-======== ==========
-	 IP address
-======== ==========
-WiFi	 10.42.0.1
-Ethernet 10.68.0.1
-======== ==========
+=========  ==========
+Interface  IP address
+=========  ==========
+WiFi	   10.42.0.1
+Ethernet   10.68.0.1
+=========  ==========
