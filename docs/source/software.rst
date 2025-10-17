@@ -1,4 +1,60 @@
 Software Structure
 ==================
 
+The package from `PAL Robotics` are provided in `/opt/pal/alum/share/`. In here are the packages presented. Most of the packages only provided launch files and config files. Those files can only be editted as sudo. The basic functions consist of the following packages:
+
+`tiago_dual_bringup`: Launches all the needed configs
+
+`tiago_dual_description`: Provides the definition of the Tiago model, the meshes and also the physical constraints.
+
+`tiago_dual_gazebo`: This launches gazebo in a fixed world from PAL with the Tiago model.
+
+`tiago_dual_moveit_config`: Houses all the information about the manipulators and controllers. This package is needed if you want to move Moveit2 for controlling the manipulators.
+
+`pmb2_2dnav`: Houses the navigation for the Tiago that determine the best route and update to the current environmental situation.
+
+
+Simulation
+----------
+
+There is a simulation docker available. First you need to do is download the docker file. Then create the Docker container with the following command:
+
+.. code-block::
+   
+   bash <client-name>-build-docker.sh --create
+
+The create container can be started with the command:
+
+.. code-block::
+ 
+   docker start -ai tiago-dual-115-dev
+
+Now you are in the docker container called the `Development Docker` from PAL. This Docker contains the ROS2 packages that are also provided on the actual Tiago.
+
+There is a package that contains a simulation in the supermarket provided by KAS lab. First clone the repository
+
+.. code-block::
+
+   git clone git@github.com:RichardFierkens/tiago_dual_supermarket.git
+
+.. note::
+
+   Improvement are needed (17 October 2025) for adjusting the map. But for now do this:
+
+
+Now you need to change the path for the map in the file `/opt/pal/alum/share/pal_navigation_cfg/params/nav2_map_server/00_map_server.yaml` with the path of the world of the supermarket located.
+
+After that, the simulation including moveit and nav2 can be run. 
+
+.. code-block::
+
+   ros2 launch tiago_planning supermarket_tiago.launch.py
+
+
+If you want to make some changes in the coordination of this packages. Feel free to change in the packages. 
+
+	- `tiago_planning/state_machine.cpp`: In here, the FSM is presented and the coordinations of the manipulators can be changed.
+	- `tiago_planning/moveit_example.cpp`: Here, the moveit is created using MoveGroupInterfaces. So far, here is not really anything needed to change.
+	- `nav_tiago_example/navigation_tiago.cpp`: This file make sure that the coordinates for nav2 is working. This files take care of making the Tiago move from A to B.
+
 

@@ -68,7 +68,7 @@ Tiago can be driven by the LogiTec joystick. The `joystick` module is already la
 	- Press B to move to the right
  
 .. image:: joystick.png
-   :width: 400px
+   :width: 450px
    :height: 300px
    :scale: 75 %
    :align: center

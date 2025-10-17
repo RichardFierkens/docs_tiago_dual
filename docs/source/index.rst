@@ -20,6 +20,6 @@ Contents
    :hidden:
    :maxdepth: 2
  
-   Introduction <self>
+   <self>
    usage
    software
