@@ -16,7 +16,7 @@ The green button has three indicators with different modes described below:
 	- When the state is fast-blink, the emergency button is pressed 
 
 .. image:: back_tiago_base.png
-   :width: 600px
+   :width: 700px
    :height: 300px
    :scale: 75 %
    :align: center
@@ -41,6 +41,7 @@ It is also possible to ssh in the Tiago. First make sure you are connected. Type
 The password is *pal*. To log in as root, type:
 
 ..code-block::
+
   ssh root@<IP-address>
 
 The password is *palroot*
