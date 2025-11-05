@@ -91,7 +91,7 @@ Pick and Place mission
 
 A simple pick and place mission is created for the Tiago in Gazebo Classic. Before running the simulation, you need to make sure that the collision in the arms of Tiago are disabled. Otherwise a plugin for grasping the object is not possible.
 
-1. Comment the collision in the 'pal_gripper_description/gripper.urdf.xacro' file. Do this for the wrist and arm urdf in the 'tiago_description' as well.
+1. Comment the collision in the `pal_gripper_description/gripper.urdf.xacro` file. Do this for the wrist and arm urdf in the `tiago_description` as well.
 2. Launch the simulation as before:
 
    .. code-block:: bash
