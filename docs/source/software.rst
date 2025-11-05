@@ -75,11 +75,14 @@ For now (28 October 2025), there are two maps created with SLAM. If you want to 
    ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=/cmd_vel
    
 
+
 	6. When you are done with mapping, save the map to your folder with:
 	
 .. code-block::
 
    ros2 run nav2_map_server map_saver_cli -f /home/user/maps/AH_store_map --ros-args -p image_format:=pgm
+
+
 
 
 	7. Now change this .yaml file as described above.
