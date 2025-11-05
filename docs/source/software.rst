@@ -53,9 +53,11 @@ After that, the simulation including moveit and nav2 can be run.
 
 If you want to make some changes in the coordination of this packages. Feel free to change in the packages. 
 
-	- `tiago_planning/state_machine.cpp`: In here, the FSM is presented and the coordinations of the manipulators can be changed.
-	- `tiago_planning/moveit_example.cpp`: Here, the moveit is created using MoveGroupInterfaces. So far, here is not really anything needed to change.
-	- `nav_tiago_example/navigation_tiago.cpp`: This file make sure that the coordinates for nav2 is working. This files take care of making the Tiago move from A to B.
+	- `tiago_skills/detect_object_server.cpp`: This provides the vision code. Using an apriltag detector for receiving the object coordinates
+	- `tiago_skills/move_skill_server.cpp`: Here, the moveit is created using MoveGroupInterfaces. So far, here is not really anything needed to change.
+	- `tiago_skills/navigate_skill_server.cpp`: This file make sure that the coordinates for nav2 is working. This files take care of making the Tiago move.
+	- `tiago_skills/pick_place_skill_server.cpp`: This package make sure that the gripper will open and close. In here, an attach_object function is used. this is only needed for the simulation.
+	- `BehaviorTree.ROS2/btcpp_ros2_samples_tiago_dual`: This package provides the behavior tree of the simple pick and place mission. 
 	
 	
 	
@@ -64,27 +66,25 @@ Create map
 
 For now (28 October 2025), there are two maps created with SLAM. If you want to create a new map do the following:
 
-	1. Comment in the `supermarket_tiago.launch.py` the two launch arguments `loc_robot_launch` and `nav2_robot_launch` and uncomment `slam_bringup_launch`.
-	2. Select the world in the same launch file you want to create a map from. 
-	3. Launch the file
-	4. Open rviz and check the /map topic so that you can see the map
-	5. Open in another terminal:
-	
-.. code-block::
+1. Comment in the `supermarket_tiago.launch.py` the two launch arguments
+   `loc_robot_launch` and `nav2_robot_launch` and uncomment `slam_bringup_launch`.
+2. Select the world in the same launch file you want to create a map from.
+3. Launch the file.
+4. Open rviz and check the /map topic so that you can see the map.
+5. Open in another terminal:
 
-   ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=/cmd_vel
-   
+   .. code-block:: bash
 
+      ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=/cmd_vel
 
-	6. When you are done with mapping, save the map to your folder with:
-	
-.. code-block::
+6. When you are done with mapping, save the map to your folder with:
 
-   ros2 run nav2_map_server map_saver_cli -f /home/user/maps/AH_store_map --ros-args -p image_format:=pgm
+   .. code-block:: bash
 
+      ros2 run nav2_map_server map_saver_cli -f /home/user/maps/AH_store_map \
+         --ros-args -p image_format:=pgm
 
+7. Now change this .yaml file as described above.
 
-
-	7. Now change this .yaml file as described above.
 
 
