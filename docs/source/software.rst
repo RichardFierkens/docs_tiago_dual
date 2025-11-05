@@ -86,5 +86,30 @@ For now (28 October 2025), there are two maps created with SLAM. If you want to 
 
 7. Now change this .yaml file as described above.
 
+Pick and Place mission
+----------------------
+
+A simple pick and place mission is created for the Tiago in Gazebo Classic. Before running the simulation, you need to make sure that the collision in the arms of Tiago are disabled. Otherwise a plugin for grasping the object is not possible.
+
+1. Comment the collision in the 'pal_gripper_description/gripper.urdf.xacro' file. Do this for the wrist and arm urdf in the 'tiago_description' as well.
+2. Launch the simulation as before:
+
+   .. code-block:: bash
+
+      ros2 launch tiago_planning supermarket_tiago.launch.py
+      
+3. Open another terminal and launch the behavior tree:
+
+   .. code-block:: bash
+
+      ros2 launch btcpp_ros2_samples_tiago_dual sample_bt_executor.launch.xml
+      
+4. Now send the goal with the desired mission in a third terminal:
+
+   .. code-block:: bash
+
+      ros2 action send_goal /behavior_server btcpp_ros2_interfaces/action/ExecuteTree "{target_tree: PickPlaceMission}"
+
+5. This will run the pick and place mission.
 
 
