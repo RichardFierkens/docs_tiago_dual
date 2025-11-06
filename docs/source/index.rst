@@ -15,7 +15,7 @@ Contents
 .. toctree::
    :includehidden:
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 3
  
    <self>
    usage
