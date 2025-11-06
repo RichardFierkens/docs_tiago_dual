@@ -5,10 +5,7 @@
 
 TiagoDual docs documentation
 ============================
-
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-*documentation* for details.
+Welcome on the documentation page of Tiago Dual from the KAS lab
 
 .. note::
 	This docs is under active development.
@@ -23,3 +20,4 @@ Contents
    <self>
    usage
    software
+   hardware
