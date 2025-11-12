@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using TiagoDual &mdash; TiagoDual docs 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Software Structure" href="software.html" />
+    <link rel="prev" title="TiagoDual docs documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TiagoDual docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using TiagoDual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#start-up">Start Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#network">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control">Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shut-down">Shut Down</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Software Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TiagoDual docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Using TiagoDual</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-tiagodual">
+<h1>Using TiagoDual<a class="headerlink" href="#using-tiagodual" title="Link to this heading"></a></h1>
+<section id="start-up">
+<h2>Start Up<a class="headerlink" href="#start-up" title="Link to this heading"></a></h2>
+<p>Tiago has been ported to ROS2, this has lead to some changes, but not for starting the tiago. Make sure that the Tiago is in a free space when turning on. Due to the fact that the torso might go up and the arms will move.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Unrelease the emergency button (1)</p></li>
+<li><p>Press the power switch. It will turn red when it is on (2)</p></li>
+<li><p>Hold the on/off button (green) for 1 second (4)</p></li>
+</ol>
+</div></blockquote>
+<p>The green button has three indicators with different modes described below:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When the state is fixed, the robot is running</p></li>
+<li><p>When the state is slow-blink, the robotsystem is booting or shutting down</p></li>
+<li><p>When the state is fast-blink, the emergency button is pressed</p></li>
+</ul>
+</div></blockquote>
+<p>The display (3) will only show the battery percentage.</p>
+<a class="reference internal image-reference" href="_images/back_tiago_base.png"><img alt="_images/back_tiago_base.png" class="align-center" src="_images/back_tiago_base.png" style="width: 525.0px; height: 187.5px;" />
+</a>
+<p>After roughly a minute, the robot will be booted up. The orange sensors on the base will be activated and the torso will go up. This is the sign that the robot is booted up correctly.</p>
+</section>
+<section id="network">
+<h2>Network<a class="headerlink" href="#network" title="Link to this heading"></a></h2>
+<p>The Tiago has a WiFi network called ‘tiago-dual-115-Hotspot’, and the default password is now ‘PAL-H0tsp0t’. You can also connect the Tiago via an ethernet cable at the torso. The IP addresses are listed below. When you are connected and typing the IP address in a web browser, you will see the web interface of the Tiago.</p>
+<p>It is also possible to ssh in the Tiago. First make sure you are connected. Type in the terminal the following:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh pal@&lt;IP-address&gt;</span>
+</pre></div>
+</div>
+<p>The password is <kbd class="kbd docutils literal notranslate">pal</kbd>. To log in as root, type:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh root@&lt;IP-address&gt;</span>
+</pre></div>
+</div>
+<p>The password is <kbd class="kbd docutils literal notranslate">palroot</kbd>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Interface</p></th>
+<th class="head"><p>IP address</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WiFi</p></td>
+<td><p>10.42.0.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ethernet</p></td>
+<td><p>10.68.0.1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="control">
+<h2>Control<a class="headerlink" href="#control" title="Link to this heading"></a></h2>
+<p>Tiago can be driven by the LogiTec joystick. The <cite>joystick</cite> module is already launched. First of all, to make sure that the joystick work, press the vibration button. This is located in the front of the robot. Make sure that the switch on top is on <cite>D</cite>. To move the robot, press START to give priority to the joystick. To move the base forward and backward, use the left analog stick. To rotate the base on its Z axis, the right analog stick has to be operated. To move the torso up and down, the LB and LT buttons needs to be pressed. Press LB to raise the torso and LT to move it downwards. To move the head:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Press Y for upwards</p></li>
+<li><p>Press A for downwards</p></li>
+<li><p>Press X to move to the left</p></li>
+<li><p>Press B to move to the right</p></li>
+</ul>
+</div></blockquote>
+<a class="reference internal image-reference" href="_images/joystick.png"><img alt="_images/joystick.png" class="align-center" src="_images/joystick.png" style="width: 337.5px; height: 225.0px;" />
+</a>
+</section>
+<section id="shut-down">
+<h2>Shut Down<a class="headerlink" href="#shut-down" title="Link to this heading"></a></h2>
+<p>In order to shut down the Tiago follow the procedure below:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Make sure that the torso is down, until the arms lie almost on the base.</p></li>
+<li><p>Place the arms on the foam pads on the base</p></li>
+<li><p>Press the On/Off button for 1 second.</p></li>
+<li><p>When the On/Off button stops blinking, pres the electric switch.</p></li>
+</ol>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Pay Attention!
+The motors will shut down, so the head will fall down and the arms too. That’s why it is important to let the arms rest on the base. Maybe even help him while shuttung down.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="TiagoDual docs documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="software.html" class="btn btn-neutral float-right" title="Software Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Richard Fierkens.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
