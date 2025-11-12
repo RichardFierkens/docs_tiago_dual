@@ -13,11 +13,11 @@ The package from ``PAL Robotics`` are provided in `/opt/pal/alum/share/`. In her
 
 	- ``pmb2_2dnav``: Houses the navigation for the Tiago that determine the best route and update to the current environmental situation.
 
+Docker container
+----------------
+A Docker container is available from PAL Robotics. This container includes all the provided software packages and simulation worlds. These are client-specific. In other words, when you buy a robot from PAL Robotics, they provide you with the necessary software. With this container, you can work with Tiago as you would in real life. 
 
-Simulation
-----------
-
-There is a simulation docker available. First you need to do is download the docker file. Then create the Docker container with the following command:
+First you need to do is download the docker file. Download it from **LINK!!!** Then create the Docker container with the following command:
 
 .. code-block::
    
@@ -29,7 +29,10 @@ The create container can be started with the command:
  
    docker start -ai tiago-dual-115-dev
 
-Now you are in the docker container called the `Development Docker` from PAL. This Docker contains the ROS2 packages that are also provided on the actual Tiago.
+Now you are in the docker container called the `Development Docker` from PAL. To run all the simulation code, make sure you are running it in the docker container. The Docker container was used for the research assignment because Tiago was unfortunately not working.
+
+Simulation
+----------
 
 There is a package that contains a simulation in the supermarket provided by KAS lab. First clone the repository
 
